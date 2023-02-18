@@ -2,14 +2,15 @@
 import './App.css';
 import Header from './Header';
 import Main from './Main';
-// import Home from './Home';
-import Products from './Products';
-import {
-  Routes,
-  Route,
-  Link
-}
-from 'react-router-dom';
+import Home from './Home';
+// import ProductsDetail from './ProductDetail';
+// import {
+//   Routes,
+//   Route,
+//   Link
+  
+// }
+// from 'react-router-dom';
 
 
 function App() {
@@ -18,13 +19,15 @@ function App() {
      
      <Header />
      <Main />
-     <Routes>
+     {/* <Routes> */}
      
-      <Route path="/" element={<Main />}/>
+      {/* <Route path="/" element={<Main />}/> */}
+     
+       
       
 
 
-     </Routes>
+     {/* </Routes> */}
 
       
     </div>

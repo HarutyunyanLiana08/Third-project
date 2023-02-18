@@ -31,7 +31,9 @@ li {
 .fas-fa-lock{
   margin-right: 100px;
 }
-
+body {
+  background-color:antiquewhite;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -52,15 +54,26 @@ li {
 .image {
   width: 250px;
   height: 250px;
+
+}
+.image:hover{
+  transform: scale(1.2);
+  box-shadow: 2px 2px 4px rgba(0.5, 0.5, 0.5, 5);
 }
 
 .name {
   font-size: 24px;
   margin: 10px 0;
   cursor: pointer;
+  font-style: oblique ;
 }
 
 .price {
   font-size: 18px;
   color: #999;
+}
+.btn {
+  border-radius: 0.5;
+  cursor: pointer;
+  
 }
