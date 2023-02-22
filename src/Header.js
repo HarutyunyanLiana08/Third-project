@@ -1,62 +1,41 @@
-// import {
-   
-//     Link
-//   }
-//   from 'react-router-dom';
+
 
 import React from 'react';
+import {Link} from 'react-router-dom';
+import shop from './img/shop.png';
+// import { useState } from 'react';
+// import Button from './Button';
+//   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faCartShopping } from '@fortawesome/free-regular-svg-icons';
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faPlus } from '@fortawesome/free-solid-svg-icons';
+// import { fa-regular fa-cart-shopping } from '@fortawesome/free-solid-svg-icons';
 
-function Header() {
+function Header({handleClick,count}) {
+ 
   return (
     <header>
       <nav>
         
         <ul className="nav__block">
         <div className='logo'> Jewelry</div>
-          <li> Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Categories</li>
+          <li> <Link to="/" className="link">Home</Link></li>
+          <li><Link to="about" className="link">About</Link></li>
+          <li><Link to="Contact" className="link">Contact</Link></li>
+          <li><Link to="categories" className="link">Categories</Link></li>
           <div className="search-container">
-            <input type="text" placeholder="Search" />
+            <input  style= {{width:100}}type="text" placeholder="Search" />
+            <img style={{width:30,heigt:30}} src={shop}/>
+            <span>{count}</span>
             
           </div>
-          <i className="fas fa-lock"></i>
+           {/* <FontAwesomeIcon icon={faCartShopping} /> */}
+          {/* <FontAwesomeIcon icon="fa-regular fa-cart-shopping" /> */}
         </ul>
       </nav>
-     
+     {/* <Button handleClick={handleClick}/>   */}
     </header>
   );
 }
-
 export default Header
-// function Header (){
-    // const navigation = ["Home", "Service", "About","Contact","Address"]
-//     return(
-//         <nav>
-//         <ul className = "nav__block">
-//             {navigation.map((item,index)=> (
-//                 <li key = {index}>{item}</li>
-        
-//             ))
-        
-//             }
-//         </ul>
-//                 </nav>
-   
-// )
-
-
-// }
-
-
- 
-    
-    //   <ul>
-    // //     <li> <Link to="/">Home</Link></li>
-    // //     <li> <Link to="/products">Products</Link></li>
-    // //   </ul>
         

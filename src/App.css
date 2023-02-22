@@ -5,18 +5,25 @@
   margin-right: 150px;
   font-style: italic;
   cursor: pointer;
- 
 }
+
+
 .nav__block{
   display:flex;
   list-style-type: none;
   font-size: 25px;
   margin-right: 0;
+  
  
 }
 li {
   margin-right: 30px;
   cursor: pointer;
+  text-decoration: none;
+}
+.link{
+  text-decoration: none;
+  color:black
 }
 .search-container {
  
@@ -54,7 +61,25 @@ body {
 .image {
   width: 250px;
   height: 250px;
+  object-fit: cover;
+  transition: all 0.3;
+  
 
+}
+.images {
+  align-items: center;
+  width:350px;
+  height:350px;
+  object-fit: contain;
+
+}
+.more_info{
+display: flex;
+
+
+}
+.info {
+  margin-left:20px;
 }
 .image:hover{
   transform: scale(1.2);
@@ -76,4 +101,19 @@ body {
   border-radius: 0.5;
   cursor: pointer;
   
+}
+.des{
+  width:500px;
+}
+.about{
+  width:500px;
+  margin:0 auto;
+  line-height: 30px;
+}
+.footer {
+  text-align: center;
+  padding-top: 250px;
+}
+.count{
+  transform: translate(42px, 18px);
 }
