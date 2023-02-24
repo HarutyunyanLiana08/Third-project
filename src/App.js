@@ -1,4 +1,3 @@
-
 import './App.css';
 import Header from './Header';
 import Main from './Main';
@@ -12,7 +11,7 @@ import {
   Link
   
 }
-from 'react-router-dom'
+from 'react-router-dom';
 import About from './About';
 import { useState } from 'react';
 
@@ -22,11 +21,8 @@ function App() {
   return (
    
     <div className="App">
-     
-     <Header handleClick={handleClick} count={count}/>
-     {/* <Main /> */}
+     <Header  count={count}/>
      <Routes>
-     
       <Route path="/" element={<Main handleClick={handleClick}/>}/>
       <Route path="/product/:id" element={<Product handleClick={handleClick}/>}/>
       <Route path="about" element={< About/>}/>

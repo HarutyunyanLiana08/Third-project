@@ -5,11 +5,10 @@ import handTriangle from "./img/hand-triangle.png"
 import necklace from "./img/necklace.png"
 import necklaceSrvak from "./img/necklace-srvak.png"
 import ring from "./img/ring.png"
-import Button from './Button';
 
 const data = [
   {
-    id: 1,
+    id: 0,
     img: chokerSharakan,
     name: 'Choker Sharakan',
     price: '149.000 AMD',
@@ -18,7 +17,7 @@ const data = [
     stone: 'shell pearl 925 silver' 
   },
   {
-    id: 2,
+    id: 1,
     img: earrings,
     name: 'Earrings',
     price: '49.000 AMD',
@@ -28,14 +27,14 @@ const data = [
   
   },
   {
-    id: 3,
+    id: 2,
     img: handTriangle,
     name: 'Hand Triangle',
     price: '30.000 AMD',
     description: 'This is the Hand Triangle description',
   },
   {
-    id: 4,
+    id: 3,
     img: necklace,
     name: 'Archangel Gabriel',
     price: '85.000 AMD',
@@ -43,14 +42,14 @@ const data = [
     weight:"24gr",
   },
   {
-    id: 5,
+    id: 4,
     img: necklaceSrvak,
     name: 'Necklace Srvak',
     price: '119.000 AMD',
     description: 'This is the Necklace Srvak description',
   },
   {
-    id: 6,
+    id: 5,
     img: ring,
     name: 'Ring Ag',
     price: '43.000 AMD',
@@ -60,19 +59,19 @@ const data = [
 
 export default function Product({handleClick}) {
   const { id } = useParams();
-  const product = data.find((el) => el.id === +id);
-console.log(product);
+  const product = data[id]
+
   return (
     <div className="more_info">
-      <img src={product.img} alt="" className="images" />
+      <img src={data[id].img} alt="" className="images" />
       <div className="info">
-        <h2>{product.name}</h2>
+        <h2>{data[id].name}</h2>
         <p className="des">{product.description}</p>
-        <h3>{product.price}</h3>
-        <h4> Weight:{product.weight}</h4>
+        <h3>{data[id].price}</h3>
+        <h4> Weight:{data[id].weight}</h4>
         <h4> Stone: {product.stone}</h4>
-        <Button handleClick={handleClick} />
-        {/* <button className="btn">Add to cart</button> */}
+        <button onClick={handleClick}>Add to cart </button>
+       
       </div>
     </div>
   );

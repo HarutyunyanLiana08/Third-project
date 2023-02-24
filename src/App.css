@@ -117,3 +117,13 @@ display: flex;
 .count{
   transform: translate(42px, 18px);
 }
+.contact a{
+ color:black;
+  text-decoration: none;
+  line-height: 30px;
+  font-size: 20px;
+ 
+}
+.contact{
+  margin:100px 50px;
+}
